@@ -1,10 +1,4 @@
-import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "@remix-run/react";
+import { Links, Meta, Outlet, Scripts } from "@remix-run/react";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -16,8 +10,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
-        <ScrollRestoration />
+        <header className="info">
+          <a href="https://dexa.ai">
+            <img src="/static/dexa-logo.svg" className="logo" alt="Dexa Labs" />
+          </a>
+          <p>
+            Every person mentioned on a Huberman Lab episode.
+            <br />
+            Select a someone to see who they are connected to.
+          </p>
+        </header>
+        <div className="graph">{children}</div>
         <Scripts />
       </body>
     </html>

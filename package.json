@@ -1,8 +1,13 @@
 {
-  "name": "huberman-people-graph",
+  "name": "huberman-people-visualization",
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "repository": "dexaai/huberman-people-visualization",
+  "author": {
+    "name": "Riley Tomasek",
+    "email": "riley@dexa.ai"
+  },
   "scripts": {
     "build": "remix vite:build",
     "deploy": "npm run build && wrangler pages deploy ./build/client",
@@ -21,7 +26,8 @@
     "isbot": "^4.1.0",
     "miniflare": "^3.20231030.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-force-graph-2d": "^1.25.4"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240222.0",
